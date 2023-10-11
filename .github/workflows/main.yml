@@ -23,5 +23,5 @@ jobs:
         pip install pandas openpyxl
 
     - name: Run Analysis
-      run: python Mobile_Price_Prediction.py.py  
+      run: python Mobile_Price_Prediction.py
   
