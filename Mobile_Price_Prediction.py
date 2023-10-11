@@ -110,7 +110,7 @@ print("Accuracy of Logistic Regression:", accuracy)
 prediction = logistic_reg.predict(X_test)
 
 #Predicting Model on Test Data
-test_df = pd.read_csv(r"c:\Users\Hp\Downloads\archive\test.csv") 
+test_df = pd.read_csv("test.csv") 
 test_df
 
 test_df = test_df.drop(['id'], axis = 1)
