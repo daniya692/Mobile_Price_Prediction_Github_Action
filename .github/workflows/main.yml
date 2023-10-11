@@ -1,21 +1,27 @@
 name: Mobile Price Prediction
-'on':
+on:
   push:
     branches:
-      - main
+      - main  
+
 jobs:
-  build:
+  analyze_data:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - name: Train ML model
-        run: |
-          python Mobile_Price_Prediction.py  
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
 
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas openpyxl
+
+    - name: Run Analysis
+      run: python Mobile_Price_Prediction.py.py  
   
