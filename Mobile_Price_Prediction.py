@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #Load the Data
-df = pd.read_csv(r"c:\Users\Hp\Downloads\archive\train.csv")
+df = pd.read_csv("train.csv")
 df
 
 #EDA
